@@ -65,3 +65,12 @@ Once `vagrant up` has finished, follow these steps to start the server.
 
 * It may be necessary to configure the server's mail system
 * `lf_update` is a custom script that has been placed at `/opt/liquid_feedback_core/lf_updated` and that may need to run on a regular basis; it may be necessary to run this manually or if the site does not seem to be functioning correctly
+
+### Building docker
+
+```sh
+docker build . -t liquid-feedback
+docker run -it \
+    -p 4567:80 \
+    liquid-feedback
+```
